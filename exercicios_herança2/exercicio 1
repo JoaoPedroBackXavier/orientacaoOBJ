@@ -1,0 +1,55 @@
+enum Meses{
+    Inverno = 0,
+    Primavera = 0.25,
+    Verao = 0.5,
+    Outono = 0.75
+}
+let mesAtual: number = 0
+
+class Roupa{
+    cor: string
+    tamanho: string
+    marca: string
+    desconto: number
+// desconto em porcentagem
+
+    constructor(cor: string,tamanho: string,marca: string,desconto: number){
+        this.cor = cor
+        this.tamanho = tamanho
+        this.marca = marca
+        this.desconto = desconto
+    }
+}
+
+class Camisa extends Roupa{
+    tipoDaGola: string
+    constructor(cor: string,tamanho: string,marca: string,desconto: number,tipoDaGola: string){
+        super(cor,tamanho,marca,desconto)
+        this.tipoDaGola = tipoDaGola
+    }
+}
+
+class Casaco extends Roupa{
+    tipoDoCasaco: string
+        constructor(cor: string,tamanho: string,marca: string,desconto: number,tipoDoCasaco: string){
+        super(cor,tamanho,marca,desconto)
+        this.tipoDoCasaco = tipoDoCasaco
+    }
+}
+
+let casacoLegal = new Casaco("azul","M","nike",0,"casaco fino")
+
+class Sapato extends Roupa{
+    material: string = ''
+    constructor(cor: string,tamanho: string,marca: string,desconto: number,material: string){
+        super(cor,tamanho,marca,desconto)
+        this.material = material
+    }
+}
+
+if(mesAtual == Meses.Inverno){
+    casacoLegal.desconto = 10
+}
+
+console.log(casacoLegal)
+

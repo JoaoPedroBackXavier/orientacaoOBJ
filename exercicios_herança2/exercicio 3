@@ -1,0 +1,27 @@
+class Funcionario{
+    funcao: string
+    cargaHoraria: string
+    salario: number
+// salario em reais
+    constructor(funcao: string, cargaHoraria: string,salario: number){
+        this.funcao = funcao
+        this.cargaHoraria = cargaHoraria
+        this.salario = salario
+    }
+}
+
+class Professor extends Funcionario{
+    salas: []
+    constructor(salas: [], funcao: string, cargaHoraria: string,salario: number){
+        super(funcao,cargaHoraria,salario)
+        this.salas = salas
+    }
+}
+
+class Faxineiro extends Funcionario{
+    utensilios: string[]
+    constructor(utensilios: [], funcao: string, cargaHoraria: string,salario: number){
+        super(funcao,cargaHoraria,salario)
+        this.utensilios = utensilios
+    }
+}
