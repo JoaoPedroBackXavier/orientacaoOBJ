@@ -1,0 +1,118 @@
+class Cliente{
+    nome: string
+    cnpj: number
+    endereco: string
+    constructor(nome: string,cnpj: number,endereco: string){
+        this.nome = nome
+        this.cnpj = cnpj
+        this.endereco = endereco
+    }
+}
+
+class ClienteContratante extends Cliente{
+    propiedadeContratante: string
+    constructor(nome: string,cnpj: number,endereco: string,propiedadeContratante:string){
+        super(nome,cnpj,endereco)
+        this.propiedadeContratante = propiedadeContratante
+    }
+}
+
+class Esporadico extends Cliente{
+    propiedadeEsporadico: string
+    constructor(nome: string,cnpj: number,endereco: string,propiedadeEsporadico:string){
+        super(nome,cnpj,endereco)
+        this.propiedadeEsporadico = propiedadeEsporadico
+    }
+}
+class Veiculo{
+    placa: string
+    modelo: string
+    capacidadeDeCarga: number
+    tipoDeCarga: string
+    status: string
+    constructor(placa: string,modelo: string,capacidadeDeCarga: number,tipoDeCarga: string,status: string){
+        this.placa = placa
+        this.modelo = modelo
+        this.capacidadeDeCarga = capacidadeDeCarga
+        this.tipoDeCarga = tipoDeCarga
+        this.status = status
+
+    }
+}
+
+class Carga{
+peso: number 
+volume: number 
+tipo: string 
+origem: string 
+destino: string 
+dataDeEmbarquePrevista: string 
+dataDeEntregaPrevista: string 
+constructor(peso: number , volume: number, tipo: string , origem: string , destino: string , dataDeEmbarquePrevista: string ,dataDeEntregaPrevista: string ){
+    this.peso = peso
+    this.volume = volume
+    this.tipo = tipo
+    this.origem = origem
+    this.destino = destino
+    this.dataDeEmbarquePrevista = dataDeEmbarquePrevista
+    this.dataDeEntregaPrevista = dataDeEntregaPrevista
+}
+}
+
+class Motorista{
+    nome: string
+    cnh: number
+    categoria: string
+    experiencia: string
+    veiculoAtribuido: string
+    constructor(nome: string,cnh: number,categoria: string,experiencia: string,veiculoAtribuido: string){
+        this.nome = nome
+        this.cnh = cnh
+        this.categoria = categoria
+        this.experiencia = experiencia
+        this.veiculoAtribuido = veiculoAtribuido
+    }
+}
+
+class Rota{
+    origem:string
+    destino:string
+    distancia:number
+    tempoEstimadoDeViagem:number
+    listaDeVeiculosQuePercorremARota: []
+    constructor(origem:string,destino:string,distancia:number,tempoEstimadoDeViagem:number,listaDeVeiculosQuePercorremARota: []){
+        this.origem = origem
+        this.destino = destino
+        this.distancia = distancia
+        this.tempoEstimadoDeViagem = tempoEstimadoDeViagem
+        this.listaDeVeiculosQuePercorremARota = listaDeVeiculosQuePercorremARota
+    }
+}
+
+class Entrega{
+    data:number
+    hora:number
+    cliente:Cliente
+    carga:Carga
+    veiculo:Veiculo
+    motorista:Motorista
+    status: string
+    constructor(data:number,hora:number,cliente:Cliente,carga:Carga,veiculo:Veiculo,motorista:Motorista,status: string){
+        this.data = data
+        this.hora = hora
+        this.cliente = cliente
+        this.carga = carga
+        this.veiculo = veiculo
+        this.motorista = motorista
+        this.status = status
+    }
+}
+
+class NotaFiscal{
+    numero: number
+    dataDeEmissao: number
+    cliente: string
+    itens: string
+    valorTotal: number
+    formaDePagamento: string
+}

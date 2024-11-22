@@ -1,0 +1,30 @@
+// tem a classe nota fiscal separada da do combustivel porque eu vou considerar que é um daqueles postos que tem um mini mercadinho junto
+class NotaFiscal1{
+    data: number
+// 31012019 == 31/01/2019
+    valorTotalBRL: number
+    itens: []
+    constructor(data:number,valorTotalBRL: number,itens:[]){
+        this.data = data
+        this.valorTotalBRL = valorTotalBRL
+        this.itens = itens
+    }
+}
+class Carro{
+    placa:string
+    cpfDoPropietario:number
+    constructor(placa:string,cpfDoPropietario:number){
+        this.placa = placa
+        this.cpfDoPropietario = cpfDoPropietario
+    }
+}
+class NotaCombustivel extends NotaFiscal1{
+    tipoCombustivel: string
+    litros: [[number,Carro]]
+    // se for uma frota ficara registrado quantos litros foi em cada carro
+    constructor(data:number,valorBRL: number,itens:[],tipoCombustivel: string,litros: [[number,Carro]]){
+        super(data,valorBRL,itens)
+        this.litros = litros
+        this.tipoCombustivel = tipoCombustivel
+    }
+}

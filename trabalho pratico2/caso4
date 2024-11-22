@@ -1,0 +1,32 @@
+class Curso{
+    linguagem: string
+    materiais: string[] = ["material1","material2","material3","material4"]
+    constructor(linguagem: string){
+        this.linguagem = linguagem
+    }
+}
+const curso1 = new Curso("ingles")
+
+class Aluno{
+    nome: string
+    objetivo: string
+    necessidade: string
+    curso: Curso
+    materiais: [] = []
+    avaliar(aluno:Aluno){
+        switch(aluno.objetivo){
+//          em cada case adiciona um ou mais materiais
+        }
+}
+    constructor(nome: string,curso: Curso,objetivo: string,necessidade: string,){
+        this.nome = nome
+        this.curso = curso
+        this.objetivo = objetivo
+        this.necessidade = necessidade
+    }
+}
+const aluno1 = new Aluno("joaozitos gameplays",curso1 , "objetivo1","necessidade1")
+
+function avaliar(aluno:Aluno){
+
+}

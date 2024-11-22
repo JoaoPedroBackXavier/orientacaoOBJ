@@ -1,0 +1,57 @@
+class Funcionario{
+    nome: string
+    salario: number
+    funcao: string
+    horarioDeTrabalho: string
+    constructor(nome:string,salario: number,funcao: string,horarioDeTrabalho: string){
+        this.salario = salario
+        this.nome = nome
+        this.funcao = funcao
+        this.horarioDeTrabalho = horarioDeTrabalho
+    }
+}
+
+class Horista extends Funcionario{
+    horasTrabalhadas: number
+    constructor(nome:string,salario: number,funcao: string,horarioDeTrabalho: string,horasTrabalhadas: number){
+        super(nome,salario,funcao,horarioDeTrabalho)
+        this.horasTrabalhadas = horasTrabalhadas
+    }
+}
+
+class Comissionado extends Funcionario{
+    horasTrabalhadas: number
+    fixo: number
+    constructor(nome:string,salario: number,funcao: string,horarioDeTrabalho: string,fixo: number,horasTrabalhadas:number){
+        super(nome,salario,funcao,horarioDeTrabalho)
+        this.fixo = fixo
+        this.horasTrabalhadas = horasTrabalhadas
+    }
+}
+
+class Assalariado extends Funcionario{
+    fixo: number
+    constructor(nome:string,salario: number,funcao: string,horarioDeTrabalho: string,fixo: number){
+        super(nome,salario,funcao,horarioDeTrabalho)
+        this.fixo = fixo
+    }
+}
+
+class Ativos{
+    nome: string
+    funcional: boolean
+    dataDaUltimaManutencao: number
+    constructor(nome: string,funcional: boolean,dataDaUltimaManutencao: number){
+        this.nome = nome
+        this.funcional = funcional
+        this.dataDaUltimaManutencao = dataDaUltimaManutencao
+    }
+}
+
+class Computador extends Ativos{
+    pertenceA: Funcionario
+    constructor(nome: string,funcional: boolean,dataDaUltimaManutencao: number,pertenceA: Funcionario){
+        super(nome,funcional,dataDaUltimaManutencao)
+        this.pertenceA = pertenceA
+    }
+}
