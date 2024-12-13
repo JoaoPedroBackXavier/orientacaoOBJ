@@ -1,0 +1,42 @@
+abstract class forma{
+    nome: string
+    cor: string
+    constructor(nome:string,cor:string){
+        this.nome=nome
+        this.cor=cor
+    }
+    abstract movimento():void
+}
+
+class circulo extends forma{
+    raio:number
+    constructor(nome:string,cor:string,raio:number){
+        super(nome,cor)
+        this.raio = raio
+    }
+    movimento():void{
+        console.log("rolando")
+    }
+}
+class retangulo extends forma{
+    area:number
+    constructor(nome:string,cor:string,area:number){
+        super(nome,cor)
+        this.area = area
+    }
+    movimento():void{
+        console.log("arrastando")
+    }
+}
+
+class triangulo extends forma{
+    tipo:string
+// o tipo é por exemplo "triangulo-retangulo" ou "de isoselis"
+    constructor(nome:string,cor:string,tipo:string){
+        super(nome,cor)
+        this.tipo = tipo
+    }
+    movimento():void{
+        console.log("movimento de rotação sem deslizamento")
+    }
+}

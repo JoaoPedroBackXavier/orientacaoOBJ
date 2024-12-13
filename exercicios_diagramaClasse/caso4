@@ -1,0 +1,61 @@
+class Mesa{
+    numero: number
+    capacidae: number
+    status: string
+    constructor(numero: number,capacidae: number,status: string){
+        this.numero =numero
+        this.capacidae =capacidae
+        this.status =status
+    }
+}
+
+class Cliente{
+    nome: string
+    telefone: number
+        constructor(nome: string,telefone: number){
+        this.nome =nome
+        this.telefone =telefone
+    }
+}
+
+class Pedido{
+    numero: number
+    data: number
+    mesa: Mesa
+    listaItens: Prato
+        constructor(numero: number,data: number,mesa: Mesa,listaItens: Prato){
+        this.numero =numero
+        this.data =data
+        this.mesa =mesa
+        this.listaItens =listaItens
+    }
+}
+
+class ItemPedido{
+    prato: Prato
+    quantidade: number
+        constructor(prato: Prato,quantidade: number){
+        this.prato =prato
+        this.quantidade =quantidade
+    }
+}
+
+class Prato{
+    nome: string
+    preco:  number
+    ingredientes: []
+        constructor(nome: string,preco:  number,ingredientes: []){
+        this.nome =nome
+        this.preco =preco
+        this.ingredientes =ingredientes
+    }
+}
+
+class Garcom{
+    nome: string
+    codigo: number
+        constructor(nome: string,codigo: number){
+        this.nome =nome
+        this.codigo =codigo
+    }
+}

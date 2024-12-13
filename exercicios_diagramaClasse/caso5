@@ -1,0 +1,62 @@
+class Veiculo{
+    placa: string
+    modelo: string
+    cor: string
+    vaga: Vaga
+    constructor(placa: string,modelo: string,cor: string,vaga: Vaga){
+        this.placa =placa
+        this.modelo =modelo
+        this.cor =cor
+        this.vaga =vaga
+    }
+}
+
+class Vaga{
+    numero:number
+    status:number
+// 0 para livre e 1 para ocupado
+    veiculo: Veiculo
+    constructor(numero:number,status:number,veiculo: Veiculo){
+        this.numero =numero
+        this.status =status
+        this.veiculo =veiculo
+    }
+}
+
+class Estacionamento{
+    nome: string
+    endereco: string
+    vagas: Vaga[]
+    constructor(nome: string,endereco: string,vagas: Vaga[]){
+        this.nome =nome
+        this.endereco =endereco
+        this.vagas =vagas
+
+    }
+}
+
+class Entrada{
+    data: number
+    hora: number
+    veiculo:Veiculo
+    vaga:Vaga
+    constructor(data: number,hora: number,veiculo:Veiculo,vaga:Vaga){
+        this.data =data
+        this.hora =hora
+        this.veiculo =veiculo
+        this.vaga =vaga
+    }
+}
+
+class Saida{
+    data: number
+    hora: number
+    veiculo:Veiculo
+    valorAPagar: number
+    constructor(data: number,hora: number,veiculo:Veiculo,valorAPagar: number){
+        this.data =data
+        this.hora =hora
+        this.veiculo =veiculo
+        this.valorAPagar=valorAPagar
+    }
+}

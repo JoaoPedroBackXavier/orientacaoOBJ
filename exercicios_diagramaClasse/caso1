@@ -1,0 +1,44 @@
+class Livro{
+    titulo: string
+    autor: Autor
+    isbn: string
+    numeroDePags: number
+
+    constructor(titulo: string,autor: Autor,isbn: string,numeroDePags: number){
+        this.titulo = titulo
+        this.autor = autor
+        this.isbn = isbn
+        this.numeroDePags =numeroDePags
+    }
+}
+
+class Autor{
+    nome: string
+    nacionalidade: string
+    constructor(nome: string,nacionalidade: string){
+        this.nome =nome
+        this.nacionalidade =nacionalidade
+    }
+}
+
+class Emprestimo{
+    dataEmprestimo: number
+    dataDevolucao: number
+    livro: Livro
+    usuario: Usuario
+    constructor(dataEmprestimo: number, dataDevolucao: number, livro: Livro, usuario: Usuario){
+        this.dataEmprestimo =dataEmprestimo
+        this.dataDevolucao =dataDevolucao
+        this.livro =livro
+        this.usuario =usuario
+    }
+}
+
+class Usuario{
+    nome: string
+    matricula: string
+    constructor(nome: string, matricula: string){
+        this. nome = nome
+        this.matricula = matricula
+    }
+}

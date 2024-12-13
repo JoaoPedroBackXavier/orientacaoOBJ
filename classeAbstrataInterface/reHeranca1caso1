@@ -1,0 +1,28 @@
+interface ItemBliblioteca{
+    serLido(): void
+}
+
+class Livro implements ItemBliblioteca{
+    serLido(): void{
+        console.log("LIVRO lido")
+    }
+    nome:string
+    autor:string
+    constructor(nome:string,autor:string){
+        this.nome = nome
+        this.autor = autor
+    }
+}
+
+class Revista implements ItemBliblioteca{
+    serLido(): void{
+        console.log("REVISTA lido")
+    }
+    nome: string
+    numeroDeEdicoes: number
+    constructor(a: string, b:number){
+        this.nome = a
+        this.numeroDeEdicoes = b
+    }
+}
+

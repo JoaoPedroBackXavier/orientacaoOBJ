@@ -1,0 +1,47 @@
+class Aluno{
+    matricula: string
+    nome: string
+    dataNasc: number
+    endereco: string
+    constructor(matricula: string,nome: string,dataNasc: number,endereco: string){
+        this.matricula =matricula
+        this.nome =nome
+        this.dataNasc =dataNasc
+        this.endereco =endereco
+    }
+}
+
+class Disiplina{
+    codigo: number
+    nome: string
+    cargaHoraria: number
+    constructor(codigo: number,nome: string,cargaHoraria: number){
+        this.codigo =codigo
+        this.nome =nome
+        this.cargaHoraria =cargaHoraria
+    }
+}
+
+class Professor{
+    matricula: string
+    nome: string
+    areaAtuacao: string
+    constructor(matricula: string,nome: string, areaAtuacao: string){
+        this.matricula =matricula
+        this.nome =nome
+        this.areaAtuacao =areaAtuacao
+    }
+}
+
+class Turma{
+    codigo: number
+    displina: Disiplina
+    professor: Professor
+    listaAlunos: Aluno[]
+    constructor(codigo: number,displina: Disiplina,professor: Professor,listaAlunos: Aluno[]){
+        this.codigo =codigo
+        this.displina =displina
+        this.professor =professor
+        this.listaAlunos =listaAlunos
+    }
+}

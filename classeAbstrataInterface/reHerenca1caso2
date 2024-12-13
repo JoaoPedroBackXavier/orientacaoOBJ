@@ -1,0 +1,48 @@
+abstract class Animal {
+    nome: string
+    idade: number
+    raca: string
+    constructor(nome: string,idade: number,raca: string){
+        this.nome =nome
+        this.idade =idade
+        this.raca =raca
+    }
+    viver():void{
+        console.log("estou vivo")
+    }
+    abstract fazerSom():void
+}
+
+class Mamifero extends Animal{
+    pelagem: string
+    constructor(nome: string,idade: number,raca: string,pelagem: string){
+        super(nome,idade,raca)
+        this.pelagem = pelagem
+    }
+    fazerSom():void{
+        console.log("*sons de mamifero")
+    }
+}
+
+class Ave extends Animal{
+    tipoBico:string
+    constructor(nome: string,idade: number,raca: string,tipoBico: string){
+        super(nome,idade,raca)
+        this.tipoBico = tipoBico
+    }
+    fazerSom():void{
+        console.log("*sons de ave")
+    }   
+}
+
+class Peixe extends Animal{
+    alimentacao:string
+    constructor(nome: string,idade: number,raca: string,alimentacao: string){
+        super(nome,idade,raca)
+        this.alimentacao = alimentacao
+    }
+    fazerSom():void{
+        console.log("*sons de peixe")
+    }
+}
+

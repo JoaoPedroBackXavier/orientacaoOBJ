@@ -1,0 +1,39 @@
+class Mantimento{
+    nome:string
+    quantidade:number
+    constructor(nome:string,quantidade:number){
+        this.nome=nome
+        this.quantidade=quantidade
+    }
+}
+
+class ProdutoFinal{
+    mantimentos: Mantimento[]
+    nome: string
+    constructor(mantimentos: Mantimento[],nome: string){
+        this.mantimentos =mantimentos
+        this.nome =nome
+    }
+}
+
+class Venda{
+    cliente: Cliente
+    produtos: ProdutoFinal[]
+    idVenda: number
+    data: number
+    constructor(cliente: Cliente,produtos: ProdutoFinal[],idVenda: number,data: number){
+        this.cliente = cliente
+        this.produtos = produtos   
+        this.idVenda = idVenda   
+        this.data = data  
+    }
+}
+
+class Cliente{
+    nome: string
+    numeroDeCompras: number
+    constructor(a:string,b:number){
+        this.nome=a
+        this.numeroDeCompras=b
+    }
+}
