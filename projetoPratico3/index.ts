@@ -24,7 +24,7 @@ class Turma {
 class Aluno {
 // aluno nao vai ter id própio
     nome: string
-    idTurma: Number
+    idTurma: Number = 0
 // o "idTurma" vai ser definido pela função que esta na classe de turma
     serie: number
     identidade: {
@@ -62,7 +62,7 @@ enum Disciplina{
 // disciplina que o professor pode ter ^^^^^^
 
 class Professor extends Funcionario{
-    idTurma: Number
+    idTurma: Number = 0
 // o idTUrma vai ser definido pela função que esta na classe de turma
     sala: number
     diciplina: Disciplina
@@ -130,3 +130,11 @@ turma4.adicionarProfessor(prof4)
 turma5.adicionarProfessor(prof5)
 turma6.adicionarProfessor(prof6)
 
+/*
+console.log(turma1)
+console.log(turma2)
+console.log(turma3)
+console.log(turma4)
+console.log(turma5)
+console.log(turma6)
+*/
